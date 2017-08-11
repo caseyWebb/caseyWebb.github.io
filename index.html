@@ -85,6 +85,12 @@
       background-color: #1c1cf0;
     }
   </style>
+
+  <script>
+    fetch('https://api.github.com/zen')
+      .then(async (res) => document.title += ` | ${await res.text()}`)
+      .catch(() => {/* noop */})
+  </script>
 </head>
 <body>
   <h1>My name is <span class="name">Casey Webb</span></h1>
