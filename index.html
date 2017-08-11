@@ -7,6 +7,15 @@
   <title>Casey Webb</title>
 
   <style>
+    @keyframes flash {
+      0%, 50%, 100% {
+        opacity: 1;
+      }
+      25%, 75% {
+        opacity: 0;
+      }
+    }
+
     body {
       font-family: "Helvetica Neue", "Segoe UI", sans-serif;
       color: #333;
@@ -18,10 +27,15 @@
         margin-left: 100px;
       }
     }
-    small {
+    .email + small {
       font-size: 10px;
       color: #ccc;
       display: inline-block;
+      transition: all .25s;
+    }
+    .email:hover + small {
+      color: #E7040F;
+      animation: 2s flash infinite linear;
     }
     .name {
       display: inline-block;
