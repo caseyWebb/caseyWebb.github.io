@@ -21,6 +21,7 @@
       font-family: "Helvetica Neue", "Segoe UI", sans-serif;
       color: #333;
       margin: 2rem;
+      height: 100%;
     }
     @media (min-width: 650px) {
       body {
@@ -84,6 +85,15 @@
     .email:hover {
       background-color: #1c1cf0;
     }
+    .charts {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .charts figure {
+      display: inline-block;
+      width: 550px;
+    }
   </style>
 
   <script>
@@ -109,5 +119,10 @@
   <h2>
     And of course I have an <a href="mailto:notcaseywebb@gmail.com" class="email">email</a> <small>(but please don't email me)</small>
   </h2>
+
+  <div class="charts">
+    <figure class="activity"><embed src="https://wakatime.com/share/@9b0ff346-2131-4d54-81dc-f17b6686f613/062353b3-f2cd-47fe-be3b-eb5df0553b30.svg"></embed></figure>
+    <figure class="languages"><embed src="https://wakatime.com/share/@9b0ff346-2131-4d54-81dc-f17b6686f613/4b478aef-585c-4c31-b86c-c0243b39df27.svg"></embed></figure>
+  </div>
 </body>
 </html>
