@@ -8,36 +8,24 @@
   <title>Casey Webb</title>
 
   <style>
-    @keyframes flash {
-      0%, 50%, 100% {
-        opacity: 1;
-      }
-      25%, 75% {
-        opacity: 0;
-      }
+    * {
+      box-sizing: border-box;
     }
-
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
     body {
+      position: relative;
       font-family: "Helvetica Neue", "Segoe UI", sans-serif;
       color: #333;
-      margin: 2rem;
-      height: 100%;
+      padding: 2rem;
     }
     @media (min-width: 650px) {
       body {
-        margin-top: 100px;
-        margin-left: 100px;
+        padding-top: 6rem;
+        padding-left: 6rem;
       }
-    }
-    .email + small {
-      font-size: 10px;
-      color: #ccc;
-      display: inline-block;
-      transition: all .25s;
-    }
-    .email:hover + small {
-      color: #E7040F;
-      animation: 2s flash infinite linear;
     }
     .name {
       display: inline-block;
@@ -56,12 +44,12 @@
     }
     .keybase {
       color: #fd6f31;
-    }
+      }
     .keybase:hover {
       background-color: #fd6f31;
     }
     .github {
-      font-family: Menlo, Courier, monospace;
+      font-family: "Fira Code", "Source Code Pro", "Inconsolata", "Consolas", "Menlo", monospace;
       color: #666;
     }
     .github:hover {
@@ -80,25 +68,37 @@
       background-color: #02b875;
     }
     .email {
-      color: #1c1cf0;
+      color: #00449E;
     }
     .email:hover {
-      background-color: #1c1cf0;
+      background-color: #00449E;
     }
-    .charts {
+    .gitter {
+      color: #D5008F;
+    }
+    .gitter:hover {
+      background-color: #D5008F;
+    }
+    .messenger {
+      color: #0084FF;
+    }
+    .messenger:hover {
+      background-color: #0084FF;
+    }
+    .manifesto {
       position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-    .charts figure {
-      display: inline-block;
-      width: 550px;
+      text-align: right;
+      bottom: 1rem;
+      right: 2rem;
+      color: #ccc;
+      line-height: 2rem;
     }
   </style>
 
   <script>
     fetch('https://api.github.com/zen')
-      .then(async (res) => document.title += ` | ${await res.text()}`)
+      .then((res) => res.text())
+      .then((zen) => document.title += ` | ${zen}`)
       .catch(() => {/* noop */})
   </script>
 </head>
@@ -117,12 +117,19 @@
     Sometimes I <a href="https://medium.com/@notCaseyWebb" class="medium">blog</a>
   </h2>
   <h2>
-    And of course I have an <a href="mailto:notcaseywebb@gmail.com" class="email">email</a> <small>(but please don't email me)</small>
+    And of course I have an <a href="mailto:notcaseywebb@gmail.com" class="email">email</a>, but there are
+    <a href="https://gitter.im/caseyWebb" class="gitter">better</a>
+    <a href="https://www.messenger.com/t/notcaseywebb" class="messenger">ways</a>
+    to contact me
   </h2>
-
-  <div class="charts">
-    <figure class="activity"><embed src="https://wakatime.com/share/@9b0ff346-2131-4d54-81dc-f17b6686f613/062353b3-f2cd-47fe-be3b-eb5df0553b30.svg"></embed></figure>
-    <figure class="languages"><embed src="https://wakatime.com/share/@9b0ff346-2131-4d54-81dc-f17b6686f613/4b478aef-585c-4c31-b86c-c0243b39df27.svg"></embed></figure>
+  <div class="manifesto">
+    UX is not about fancy animations, retina cover images, or the latest trends in design
+    <br>
+    It's about respecting your user's time, privacy, sanity, and wallet
+    <br>
+    Sometimes, less is more
+    <br>
+    💻 ♿ ♻️ 🚍 🍺 🌿 🐶 🍍
   </div>
 </body>
 </html>
