@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sugar Daddy | Does My Funk Look Big In This</title>
+  <style>
+    audio {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    ol {
+      padding-left: 2rem;
+    }
+    li {
+      padding-left: .4rem;
+      cursor: pointer;
+      color: #ccc;
+      margin-bottom: 5px;
+    }
+    li.now-playing {
+      color: #333;
+      font-weight: bold;
+    }
+    p {
+      margin-left: 1rem;
+      color: #ccc;
+      font-size: 10px; 
+    }
+  </style>
+</head>
+<body>
+  <ol>
+    <li class="now-playing">Does My Funk Look Big In This?</li>
+    <li>This Is Not A Test</li>
+    <li>Niente da Dire</li>
+    <li>N.I.M.B.Y.</li>
+    <li>All He Wants</li>
+    <li>Feed Your Mind</li>
+    <li>Up On The Good Stuff</li>
+  </ol>
+  <audio autoplay>
+    <source id="player-src" src="assets/01. Does My Funk Look Big In This.mp3" type="audio/mp3">
+    <p>Use a browser that doesn't suck.</p>
+  </audio>
+  <p>
+    I did not make these songs, I'm just trying to preserve them
+    <br>
+    All credit goes to the band "Sugar Daddy"
+    <br>
+    RIP What.CD
+    <br>
+    If there is no music, check autoplay settings
+  </p>
+  <script>
+    const $player = document.querySelector('audio')
+    const $playerSrc = document.querySelector('audio > source')
+
+    document.querySelectorAll('li').forEach((li, i) => {
+      li.addEventListener('click', () => {
+        $playerSrc.setAttribute('src', `./assets/0${i + 1}. ${li.textContent}.mp3`)
+        document.querySelector('.now-playing').className = ''
+        document.title = `Sugar Daddy | ${li.textContent}`
+        li.className = 'now-playing'
+        $player.load()
+        $player.play()
+      })
+    })
+  </script>
+</body>
+</html>
