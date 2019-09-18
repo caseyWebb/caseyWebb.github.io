@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#000" />
+    <title>Casey Webb</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .name {
+        display: inline-block;
+        background: #333;
+        color: white;
+        padding: 2px 4px;
+        margin: 0 -4px;
+      }
+      a {
+        padding: 2px 4px;
+        margin: 0 -4px;
+        text-decoration: none;
+      }
+      a:hover {
+        color: white;
+      }
+      .keybase {
+        color: #fd6f31;
+      }
+      .keybase:hover {
+        background-color: #fd6f31;
+      }
+      .github {
+        font-family: "Fira Code", "Source Code Pro", "Inconsolata", "Consolas",
+          "Menlo", monospace;
+        color: #666;
+      }
+      .github:hover {
+        background-color: #666;
+      }
+      .twitter {
+        color: #1da1f2;
+      }
+      .twitter:hover {
+        background-color: #1da1f2;
+      }
+      .medium {
+        color: #02b875;
+      }
+      .medium:hover {
+        background-color: #02b875;
+      }
+      .email {
+        color: #00449e;
+      }
+      .email:hover {
+        background-color: #00449e;
+      }
+      .gitter {
+        color: #d5008f;
+      }
+      .gitter:hover {
+        background-color: #d5008f;
+      }
+      .messenger {
+        color: #0084ff;
+      }
+      .messenger:hover {
+        background-color: #0084ff;
+      }
+      .manifesto {
+        position: absolute;
+        text-align: right;
+        bottom: 1rem;
+        right: 2rem;
+        color: #ccc;
+        line-height: 2rem;
+      }
+      .care {
+        color: #ccc;
+      }
+      .care a {
+        color: #aaa;
+        font-weight: bold;
+      }
+      .care a:hover {
+        color: white;
+        background: black;
+      }
+    </style>
+    <script>
+      fetch("https://api.github.com/zen")
+        .then(res => res.text())
+        .then(zen => (document.title += ` | ${zen}`))
+        .catch(() => {
+          /* noop */
+        });
+    </script>
+  </head>
+  <body>
+    <h1>My name is <span class="name">Casey Webb</span></h1>
+    <h2>
+      I can <a href="https://keybase.io/caseywebb" class="keybase">prove</a> it
+    </h2>
+    <h2>
+      I write <a href="https://github.com/caseyWebb" class="github">code</a>
+    </h2>
+    <h2>
+      I <a href="https://twitter.com/notcaseywebb" class="twitter">tweet</a>
+    </h2>
+    <h2>
+      Sometimes I
+      <a href="https://medium.com/@notCaseyWebb" class="medium">blog</a>
+    </h2>
+    <h2>
+      And of course I have an
+      <a href="mailto:notcaseywebb@gmail.com" class="email">email</a>, but there
+      are
+      <a href="https://gitter.im/caseyWebb" class="gitter">better</a>
+      <a href="https://www.messenger.com/t/notcaseywebb" class="messenger"
+        >ways</a
+      >
+      to contact me
+    </h2>
+    <small class="care">
+      If you find the code (or anything else) I publish useful and want to give
+      back, please consider donating to one of the following organizations:
+      <br />
+      <a href="https://ucp.org/">UCP</a>, <a href="https://afsp.org/">AFSP</a>,
+      <a href="https://norml.org/">NORML</a>,
+      <a href="https://www.eff.org/">EFF</a>,
+      <a href="https://www.wikimedia.org/">Wikimedia</a>,
+      <a href="https://www.aclu.org/">ACLU</a>,
+      <a href="https://www.mozilla.org/">Mozilla</a>,
+      <a href="https://code.org/">Code.org</a>,
+      <a href="https://represent.us/">represent.us</a>,
+      <a href="https://www.sierraclub.org">Sierra Club</a>
+    </small>
+    <div class="manifesto">
+      UX is not about fancy animations, retina cover images, or the latest
+      trends in design
+      <br />
+      It's about respecting your user's time, privacy, sanity, and wallet
+      <br />
+      Sometimes, less is more
+      <br />
+      💻 ♿ ♻️ 🚍 🍺 🌿 🐶 🍍
+    </div>
+  </body>
+</html>

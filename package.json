@@ -1,0 +1,16 @@
+{
+  "name": "@caseyWebb/website",
+  "version": "0.0.0",
+  "description": "My shitty website",
+  "repository": "https://github.com/caseyWebb/caseyWebb.github.io",
+  "author": "Casey Webb <notcaseywebb@gmail.com>",
+  "license": "WTFPL",
+  "private": true,
+  "scripts": {
+    "develop": "now dev"
+  },
+  "devDependencies": {
+    "@now/node": "^1.0.0",
+    "typescript": "^3.6.3"
+  }
+}

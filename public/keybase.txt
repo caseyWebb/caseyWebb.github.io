@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/caseywebb
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://caseywebb.xyz
+  * I am caseywebb (https://keybase.io/caseywebb) on keybase.
+  * I have a public key with fingerprint 3527 74E6 9886 B8A6 D57E  D1C2 A815 6226 6B0C 8121
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012025d0756a2429d75cd9854a81954ece337e3120eb78c8d177edc32f3750ac4fd90a",
+      "fingerprint": "352774e69886b8a6d57ed1c2a81562266b0c8121",
+      "host": "keybase.io",
+      "key_id": "a81562266b0c8121",
+      "kid": "01011b0dcf91a5dce2cca35c38c63d823f9035aca4e7c3dc7acf0584d6a974ee3bbb0a",
+      "uid": "e1562c6a7a87b172459cdf09646b5119",
+      "username": "caseywebb"
+    },
+    "service": {
+      "hostname": "caseywebb.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1502420174,
+  "expire_in": 157680000,
+  "prev": "f2f835d97108276db464ef53fcad8411ea41125997be16c7826f44cb96da348f",
+  "seqno": 51,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.73
+Comment: https://keybase.io/crypto
+
+yMJZAnicbZJ5aFRHHMc39WgS1HrQIFYsvlYpGMMcb463SIOopQXBUluDjbDO9eIz
+Zt/69mWbzWo1ViRatkXUptRSq9SjCekfJR54EQ9QDJgoNlCLR0tKIaItCNK/QueF
++k/p/DHDzHy+3993jqtTJ6SqK068LBc2T+mYXzFw6avW1Nry3JslR4a66KRLTrMZ
+H8wmbfJxpjnQTtoBEAFENGCECuQiTzOitMeJKzj0iGuUwZgZbCkjGVdcQ8aMVhj5
+mBEglOtrDwin1vGDbJOJclGQja0tJogx11CPcyq5oJpYFVTIuhKKEKUSKA4RtMIN
+YT5R2HBS5E1dENo1O8mMx/sf/nluAKEEWvkeFEQrg5QSmCjMFcWaI+x7ABOhhGuY
+wloxoXxAuKup8Gwwg6WU47lbx+1MUkZRwQRnEjLkEk9pH3jUpZJA6CVg3kRZ0WIs
+rWzQ4kdGSmdrrWOXC4Eyyc0mR/kvUtdWbLfqXBTGoQo32a0NcZzLpxNpXMwlrMUy
+/7pkZJDV9iatomCifBBmnTS0pIqDxBYSYB8JQObWOqYtF0QmEyQEYZQD25I6pmAt
+feRzTLTHIOCIUS1d6hqfYF8JzV0IjbAdIp7HpIFUMY6o77pKelQL7HLfSc61ORs6
+aQJtTtFkPfNBU1bErZFxtl7uXzcxVVGdmjzpheSLpaqrpj//eNf6KlPlscwb1wd7
+h7d0/XhjdM4n3bmv2YEw6Piuu+UpLcVN3rG+zwf3fjh51aOlt8aitaeuTPpzR8OR
+u8ejpwd1oat+wujpWb/8tfnNZ6/u+6Nn9vZ7I0fPD90RMxurZm4fOvP2O6dPop7b
+hxfUnAMrX4n7XrpcPvugVPdby8TPio/XP8vJzo3DZ/zlcPQ8fOv+vrkfz1tzsZ1/
+37loahz3bxtZknXunPzivULjofLOX2d/M7DiSbl+bOOu7ify8O8Xbvc/XLb604bF
+xfqf9uDepeB98PfI3sHOwvx3p6x6ve1u5bczho/OacRVDQOvnXu0++APXT9/0H71
+cQes2fFlZc3+0u6+9S8un7ZsZ82uoX8ABPlA0g==
+=ZVzR
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/caseywebb
+
+==================================================================
