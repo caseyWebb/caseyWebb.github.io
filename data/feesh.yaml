@@ -1,0 +1,342 @@
+##########
+
+# aquatic plants
+
+anacharis: &anacharis
+  species: Egeria densa
+  common_name: Anacharis
+
+pennywort: &pennywort
+  species: Hydrocotyle leucocephala
+  common_name: Brazilian Pennywort
+
+frogbit: &frogbit
+  species: Limnobium laevigatum
+  common_name: Frogbit
+
+hyacinth: &hyacinth
+  species: Eichhornia crassipes
+  common_name: Water Hyacinth
+
+water_lettuce: &water_lettuce
+  species: Pistia stratiotes
+  common_name: Water Lettuce
+
+ludwigia: &ludwigia
+  species: Ludwigia repens
+  common_name: Creeping Primrose-Willow
+
+rotala: &rotala
+  species: Rotala rotundifolia
+
+pearlweed: &pearlweed
+  species: Hemianthus micranthemoides
+  common_name: Pearlweed
+
+fanwort: &fanwort
+  species: Cabomba carolinia
+  common_name: Fanwort
+
+creeping_jenny: &creeping_jenny
+  species: Lysimachia nummularia
+  common_name: Creeping Jenny
+
+rosette_sword: &rosette_sword
+  species: Echinodorus parviflorus
+  common_name: Rosette Sword
+
+hornwort: &hornwort
+  species: Ceratophyllum demersum
+  common_name: Hornwort
+
+scarlet_temple: &scarlet_temple
+  species: Alternathera reineckii var Roseafolia
+  common_name: Scarlet Temple
+
+subwassertang: &subwassertang
+  species: Lomariopsis Lineata
+  common_name: Subwassertang
+
+lily: &lily
+  species: Nymphaea Stellata
+  common_name: Dwarf Aquarium Lily
+
+# aquaponic plants
+
+wandering_jew: &wandering_jew
+  species: Tradescantia zebrina
+  common_name: Wandering Jew
+
+# fish
+endlers: &endlers
+  species: Poecilia wingei
+  common_name: Endler's Livebearer, N-Class Peacock
+
+##########
+
+tanks:
+  - name: Goldies
+    specs:
+      - 55G Aquarium
+      - 2x 2'x4' Grow Bed
+      - 370W LED Grow Lights (8x HLG QB132 + 2x Meanwell HLG-185H-C1400)
+    fish:
+      - species: Carassius auratus
+        common_name: Fancy Goldfish
+        varieties:
+          - Red Cap Oranda
+          - Lionhead
+          - Black Moor
+          - Pearlscale
+          - Ryukin
+      - species: Limia tridens
+      - species: Danio rerio
+        common_name: Zebra Danio
+    plants:
+      aquatic:
+        - *anacharis
+        - *pennywort
+        - *frogbit
+        - *hyacinth
+        - *water_lettuce
+      aquaponic:
+        - species: Fragaria vesca
+          common_name: Alpine Strawberry, multiple cultivars
+        - species: Mesclun Lettuce Blend
+        - species: Brassica rapa
+          common_name: Bok Choy
+        - species: Brassica oleracea
+          common_name: Romanesco Broccoli
+        - *wandering_jew
+
+  - name: Endler Community
+    specs:
+      - 20G Long Aquarium
+      - 4'x1' Grow Tray
+      - Generic LED Lighting
+    fish:
+      - *endlers
+      - species: Trichogaster chuna
+        common_name: Honey Gourami
+      - species: Corydoras habrosus
+        common_name: Salt and Pepper Cory
+      - species: Corydoras pygmaeus
+        common_name: Pygmy Cory
+    inverts:
+      - species: Neocaridina davidi
+        common_name: Red Cherry Shrimp
+      - species: Caridina multidentata
+        common_name: Amano Shrimp
+      - species: Atyopsis moluccensis
+        common_name: Bamboo Shrimp
+    plants:
+      aquatic:
+        - *ludwigia
+        - *pennywort
+        - *rotala
+        - *anacharis
+        - *pearlweed
+        - *fanwort
+        - *rosette_sword
+        - *hornwort
+        - species: Hygrophilia polysperma
+          common_name: Dwarf Hygro
+
+  - name: Endlers pt. 2
+    description: This tank is an attempt at developing the high-fin mutation in my Endler colony.
+    specs:
+      - 10G Aquarium
+    fish:
+      - *endlers
+      - species: Tanichthys albonubes
+        common_name: White Cloud Mountain Minnow
+    plants:
+      aquatic:
+        - *ludwigia
+        - *hornwort
+
+  - name: Flowerhorn
+    specs:
+      - 75G Aquarium
+    fish:
+      - species: Super Red Dragon Flowerhorn
+        common_name: Flowerhorn
+
+  - name: Congo (Almost) Biotope
+    specs:
+      - 55G Aquarium
+      - Custom Aquaponic Grow Bed Canopy
+      - ???W LED Grow Lighting
+    fish:
+      - species: Ctenopoma acutirostre
+        common_name: Spotted Leaf Fish
+      - species: Pantodon buchholzi
+        common_name: African Butterfly Fish
+      - species: Phenacogrammus interruptus
+        common_name: Congo Tetra
+      - species: Pelvicachromis pulcher
+        common_name: Kribensis
+      - species: Synodontis nigriventris
+        common_name: Upside-Down Catfish
+    plants:
+      aquatic:
+        - *frogbit
+        # species: Anubias Nana
+        # species: Anubias Pinto
+        # species: Buce Green Wavy
+        # species: Buce Godzilla
+        # species: Crypt
+        # species: Sword
+        # species: Christmas Moss
+        # species: Vallisneria
+        # species: Dwarf Tiger Lily
+      aquaponic:
+        # species: Basil
+        # species: Tradescantia Spathea
+        # species: Sunflower
+        # species: Bush Beans
+        # species: Ice Plant
+        # species: Ivy
+
+  - name: Shellies
+    specs:
+      - 20G Long Aquarium
+    fish:
+      - species: Neolamprologus Multifasciatus
+        common_name: Multies
+
+  - name: Puffers
+    specs:
+      - 20G Half-moon Aquarium
+    fish:
+      - species: Carinotetraodon travancoricus
+        common_name: Pea Puffer
+      - species: Otocinclus affinis
+        common_name: Oto
+    plants:
+      aquatic:
+      # species: Christmas Moss
+      # species: Anubias Nana Petite
+      # species: Sword
+      # species: Crypt
+      aquaponic:
+        # species: Parlor Palm
+        # species: Pothos
+        #   - Golden
+        #   - Marble Queen
+
+  - name: Killis
+    specs:
+      - 10G Aquarium
+    fish:
+      - species: Epiplatys annulatus
+        common_name: Clown Killifish
+    plants:
+      aquatic:
+        # - *subwassertang
+        - *water_lettuce
+        - *hyacinth
+      aquaponic:
+
+  - name: Soft Water Communities
+    specs:
+      - 20G Aquarium
+    fish:
+      - - species: Betta imbellis
+          common_name: Crescent Betta
+        - species: Apistogramma juruensis
+        - species: Trigonostigma hengeli
+          common_name: Glowlight Rasbora
+        - species: Trigonostigma heteromorpha
+          common_name: Harlequin Rasbora
+      - - species: Apistogramma agassizii var Fire Red
+          common_name: Agassizi's Dwarf Cichlid
+        - species: Trichopsis pumila
+          common_name: Sparkling Gourami
+        - species: Nannostomus marilynae
+          common_name: Greenstripe Pencilfish
+      - - species: Betta coccina
+          common_name: Scarlet Betta
+        - species: Parosphromenus deissneri
+          common_name: Licorice Gourami
+        - species: Nannostomus eques
+          common_name: Hockeystick Pencilfish
+    plants:
+      aquatic:
+        - *ludwigia
+        - *scarlet_temple
+        - *rosette_sword
+        - *hornwort
+        # - *vallisneria
+
+  - name: Scarlet Baddies
+    specs:
+      - 5.5G Aquarium
+    fish:
+      - species: Dario Dario
+        common_name: Scarlet Badis
+    plants:
+      aquatic:
+        - *fanwort
+        - *hornwort
+        # - *crypt
+      aquaponic:
+        # - *pothos
+
+  - name: Livebearer Community
+    specs:
+      - 60G Aquarium
+      - CO2 Injection
+    fish:
+      - species: Xiphophorus hellerii
+        common_name: Swordtail
+      - species: Poecilia mexicana
+        common_name: Shortfin Molly
+      - species: Trichopodus trichopterus
+        common_name: Opaline Gourami
+      - species: Trichopodus leerii
+        common_name: Pearl Gourami
+      - species: Ancistrus sp.
+        common_name: Bristlenose Pleco, Regular & Blue-Eyed (L144)
+      - species: Corydoras aeneus
+        common_name: Albino Cory
+      - species: Epalzeorhynchos kalopterus
+        common_name: Flying Fox
+    plants:
+      aquatic:
+        - species: Ceratopteris thalictroides
+          common_name: Water Sprite
+        # - *anubias_nana
+        - *ludwigia
+        - *anacharis
+        - species: Bacopa Monnieri
+          common_name: Moneywort
+        - *rotala
+        - *subwassertang
+        - *lily
+        - *scarlet_temple
+      # aquaponic:
+      #   - *pothos
+
+notes:
+  - All aquaponic systems are ran as constant flood using a simple standpipe (search "Ebb and Flow Fitting Kit"). After much experimentation, I came to the conclusion that dealing with bell siphons or additional timers is not worth the effort, flood risk, or the extra wear on the pump.
+
+  - The goldies, endlers, and flowerhorn use LECA as a grow media, and the congo biotope uses Growstones (now defunct).
+
+  - With the exception of the endlers, all aquaponic systems have a 30PPI mattenfilter serving as a prefilter for the pump.
+
+  - \"Cheap\" lighting (Beamworks, Nicrew, generic LED shop lights) is used for all aquarium lighting.
+
+  - Non-aquaponic systems recieve 20-30% water changes on a weekly basis using treated tap water.
+
+  - Aquaponic systems are tested weekly and recieve a 20-30% water change when necessary.
+
+  - Soft-water tanks recieve an RO/tap mix, with wastewater being used in the others. If there is not enough wastewater to complete water changes/top offs, tap + SeaChem Equilibrium is used instead.
+
+  - Excluding the Congo biotope, all aquaponic systems have crushed coral to assist in maintaining mineral content.
+
+  - Aquaponic systems which grow food plants recieve doses of liquid kelp as needed as determined by plants. Typical dosing is 2x weekly at 1oz/10G.
+
+  - Non-food systems recieve twice weekly doses of Seachem Flourish, and daily doses of Seachem Excel. When establishing new plants Seachem Flourish Advanced is dosed daily until new growth appears. Doses are applied at labeled rates.
+
+  - Everything is always in flux, and nothing here is a hard rule. A lot is played by ear and is learned through experience.
