@@ -1,0 +1,146 @@
+:root {
+  --keybaseOrange: #fd6f31;
+  --githubGray: #666;
+  --twitterBlue: #1da1f2;
+  --mediumGreen: #02b875;
+  --emailBlue: #00449e;
+  --gitterMagenta: #d5008f;
+  --messengerBlue: #0084ff;
+  --codingFonts: "Fira Code", "Source Code Pro", "Inconsolata", "Consolas",
+    "Menlo", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  position: relative;
+  font-family: "Helvetica Neue", "Segoe UI", sans-serif;
+  color: #333;
+  padding: 2rem;
+}
+@media (min-width: 650px) {
+  body {
+    padding-top: 6rem;
+    padding-left: 6rem;
+  }
+}
+ol {
+  padding-left: 2rem;
+}
+li {
+  padding-left: 0.4rem;
+  margin-bottom: 5px;
+}
+a {
+  padding: 2px 4px;
+  margin: 0 -4px;
+  text-decoration: none;
+}
+p {
+  margin-left: 1rem;
+  color: #ccc;
+  font-size: 10px;
+}
+
+.name {
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 2px 4px;
+  margin: 0 -4px;
+}
+a.keybase,
+a.github,
+a.twitter,
+a.medium,
+a.email,
+a.gitter,
+a.messenger,
+.care a {
+  &:hover {
+    color: white;
+  }
+}
+.keybase {
+  color: var(--orange);
+  &:hover {
+    background-color: var(--orange);
+  }
+}
+.github {
+  font-family: var(--codingFonts);
+  color: var(--githubGray);
+  &:hover {
+    background-color: var(--githubGray);
+  }
+}
+.twitter {
+  color: var(--twitterBlue);
+  &:hover {
+    background-color: var(--twitterBlue);
+  }
+}
+.medium {
+  color: var(--mediumGreen);
+  &:hover {
+    background-color: var(--mediumGreen);
+  }
+}
+.email {
+  color: var(--emailBlue);
+  &:hover {
+    background-color: var(--emailBlue);
+  }
+}
+.gitter {
+  color: var(--gitterMagenta);
+  &:hover {
+    background-color: var(var(--gitterMagenta));
+  }
+}
+.messenger {
+  color: var(--messengerBlue);
+  &:hover {
+    background-color: var(--messengerBlue);
+  }
+}
+.care {
+  color: #ccc;
+  & a {
+    color: #aaa;
+    font-weight: bold;
+    &:hover {
+      background: black;
+    }
+  }
+}
+.manifesto {
+  position: absolute;
+  text-align: right;
+  bottom: 1rem;
+  right: 2rem;
+  color: #ccc;
+  line-height: 2rem;
+}
+
+audio {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.player li {
+  color: #ccc;
+  cursor: pointer;
+}
+li.now-playing {
+  color: #333;
+  font-weight: bold;
+}

@@ -1,0 +1,30 @@
+<% for (const tank of tanks) { %>
+<h1><%= tank.name %></h1>
+
+<ul>
+  <% for (const spec of tank.specs) { %>
+  <li><%= spec %></li>
+  <% } %>
+</ul>
+
+<h2>Stocking</h2>
+
+<h3>Fish</h3>
+<%= templates.speciesList({ species: tank.fish, templates }) %>
+
+<% if (tank.plants) { %>
+  <h3>Plants</h3>
+
+  <% if (tank.plants.aquatic) { %>
+    <h4>Aquatic / Floating</h4>
+    <%= templates.speciesList({ species: tank.plants.aquatic, templates }) %>
+  <% } %>
+  
+  <% if (tank.plants.aquaponic) { %>
+    <h4>Aquaponic</h4>
+    <%= templates.speciesList({ species: tank.plants.aquaponic, templates }) %>
+  <% } %>
+
+<% } %>
+
+<% } %>

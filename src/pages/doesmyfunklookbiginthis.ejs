@@ -1,0 +1,24 @@
+<ol class="player">
+  <% for (const song of songs) { %>
+  <li><%= song %>></li>
+  <% } %>
+</ol>
+
+<audio autoplay controls>
+  <source
+    id="player-src"
+    src="assets/01. Does My Funk Look Big In This.mp3"
+    type="audio/mp3"
+  />
+  <p>Use a browser that doesn't suck.</p>
+</audio>
+
+I did not make these songs, I'm just trying to preserve them
+<br />
+All credit goes to the band "Sugar Daddy"
+<br />
+RIP What.CD
+<br />
+If there is no music, check autoplay settings
+
+<script src="./assets/scripts/funkPlayer.js"></script>

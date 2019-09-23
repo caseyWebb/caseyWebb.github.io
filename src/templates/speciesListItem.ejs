@@ -1,0 +1,12 @@
+<%= data.species %>
+<% if (data.common_name) { %>
+  <em><%= data.common_name %></em>
+<% } %>
+
+<% if (data.varieties) { %>
+  <ul>
+    <% for (const variety of data.varieties) { %>
+      <li><%= variety %></li>
+    <% } %>
+  </ul>
+<% } %>

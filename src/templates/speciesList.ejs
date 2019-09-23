@@ -1,0 +1,17 @@
+<ul>
+  <% for (const s of species) { %>
+  <li>
+    <% if (Array.isArray(s)) { %>
+      <ul>
+        <% for (const _s of s) { %>
+          <li>
+            <%= templates.speciesListItem({ data: _s }) %>
+          </li>
+        <% } %>
+      </ul>
+    <% } else { %>
+      <%= templates.speciesListItem({ data: s }) %>
+    <% } %>
+  </li>
+  <% } %>
+</ul>

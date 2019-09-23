@@ -95,7 +95,6 @@ tanks:
     plants:
       aquatic:
         - *anacharis
-        - *pennywort
         - *frogbit
         - *hyacinth
         - *water_lettuce
@@ -277,7 +276,6 @@ tanks:
         common_name: Scarlet Badis
     plants:
       aquatic:
-        - *fanwort
         - *hornwort
         # - *crypt
       aquaponic:
