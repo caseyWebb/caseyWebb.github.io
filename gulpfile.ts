@@ -42,7 +42,7 @@ async function pages() {
       await fs.writeFile(
         path.join(__dirname, `build/${pageName}.html`),
         layout({
-          title: `Casey Webb | ${title}`,
+          title: title === "index" ? "Casey Webb" : `Casey Webb | ${title}`,
           content: template({
             ...data,
             templates: sharedTemplateDictionary
