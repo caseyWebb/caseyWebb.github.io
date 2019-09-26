@@ -1,15 +1,32 @@
-import { promises as fs } from "fs";
+import { promises as fs, access } from "fs";
+import * as http from "http";
 import * as path from "path";
+import axios from "axios";
+import dotenv from "dotenv";
+import { google } from "googleapis";
 import gulp from "gulp";
 import postcss from "gulp-postcss";
 import ts from "gulp-typescript";
 import terser from "gulp-terser";
 import * as _ from "lodash";
+import open from "open";
 import * as yaml from "yaml";
 
 import tsconfig from "./tsconfig.json";
 
-export const build = gulp.parallel(scripts, styles, pages);
+dotenv.config();
+
+const port = 3000;
+const oauth2Client = new google.auth.OAuth2(
+  process.env.GOOGLE_CLIENT_ID,
+  process.env.GOOGLE_CLIENT_SECRET,
+  `http://localhost:${port}`
+);
+
+export const build = gulp.series(
+  fetchImages,
+  gulp.parallel(scripts, styles, pages)
+);
 
 function scripts() {
   return gulp
@@ -104,4 +121,47 @@ async function getFileContentsDictionary(
     }),
     {}
   );
+}
+
+async function fetchImages() {
+  const token = await authenticateGooglePhotosAPI();
+
+  const api = axios.create({
+    baseURL: "https://photoslibrary.googleapis.com/v1/",
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+
+  const albums = await api.get("albums");
+
+  console.log(albums.data);
+}
+
+function authenticateGooglePhotosAPI() {
+  const url = oauth2Client.generateAuthUrl({
+    scope: "https://www.googleapis.com/auth/photoslibrary.readonly"
+  });
+
+  return new Promise(resolve => {
+    const server = http.createServer(async (req, res) => {
+      const [, code] = (req.url as string).match(
+        /\?code=([^&]+)/
+      ) as RegExpMatchArray;
+
+      const {
+        tokens: { access_token }
+      } = await oauth2Client.getToken(code);
+
+      resolve(access_token);
+
+      res.write("You may now close this window");
+      res.end();
+      server.close();
+    });
+
+    server.listen(3000);
+
+    open(url);
+  });
 }
